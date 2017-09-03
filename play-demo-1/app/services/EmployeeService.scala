@@ -18,5 +18,12 @@ class EmployeeSerivce {
     position = "程序员鼓励师"
   )
 
-  def getEmployees(): Seq[Employee] = Seq(jilen, yison)
+  val shaw = Employee(
+    id = 3,
+    name = "Shaw",
+    sex = "男",
+    position = "搬砖员"
+  )
+
+  def getEmployees(): Seq[Employee] = Seq(jilen, yison, shaw)
 }
