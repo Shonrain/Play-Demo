@@ -1,0 +1,27 @@
+@(employees: Seq[Employee])
+
+<!DOCTYPE>
+<html>
+  <head>
+    <title>shawdubie</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <table class="employee-list">
+      <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>职位</th>
+      </tr>
+      @for(e <- employees){
+        <tr>
+          <td>@e.id</td>
+          <td>@e.name</td>
+          <td>@e.sex</td>
+          <td>@e.position</td>
+        </tr>
+        }
+    </table>
+  </body>
+</html>
