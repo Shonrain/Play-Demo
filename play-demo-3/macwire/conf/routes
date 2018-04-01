@@ -1,0 +1,1 @@
+GET     /wxcard/wxcard-list       controllers.WxcardController.wxcardList

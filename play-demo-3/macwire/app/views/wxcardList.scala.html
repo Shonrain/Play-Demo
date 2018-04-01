@@ -1,0 +1,32 @@
+@(memberList: Seq[(WxcardMember, Wxcard)])
+<!DOCTYPE>
+<html>
+  <head>
+    <title>shawdubie</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th>持卡人</th>
+        <th>性别</th>
+        <th>卡号</th>
+        <th>开卡时间</th>
+        <th>会员卡名称</th>
+        <th>会员卡等级</th>
+        <th>折扣</th>
+      </tr>
+      @for((member, card) <- memberList){
+        <tr>
+          <td>@{member.name}</td>
+          <td>@{member.getSex}</td>
+          <td>@{member.cardNumber}</td>
+          <td>@{member.activeTime.toString("YYYY-MM-dd")}</td>
+          <td>@{card.title}</td>
+          <td>@{card.getLevel}</td>
+          <td>@{card.discount}折</td>
+        </tr>
+      }
+    </table>
+  </body>
+</html>
