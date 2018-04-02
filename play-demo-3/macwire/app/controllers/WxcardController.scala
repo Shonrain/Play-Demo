@@ -9,7 +9,7 @@ class WxcardController (
   cc: ControllerComponents,
   wxcardService: WxcardService,
   wxcardMemberService: WxcardMemberService
-) extends Controller(cc) {
+) extends AbstractController(cc) {
 
   def wxcardList = Action { implicit request: Request[AnyContent] =>
     val wxcardMembers = wxcardMemberService.getAll
